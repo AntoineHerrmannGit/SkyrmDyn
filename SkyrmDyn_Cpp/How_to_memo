@@ -1,0 +1,39 @@
+Convert int to float :
+    consider an int i,
+
+        i = (float) i;
+
+Same procedure for values (int, float, double) of one kind, to a value of an other kind.
+
+
+
+Convert value to string :
+    consider a double d,
+
+        std::to_string( d );
+
+Same procedure for values (int, float, double) of one kind, to a string.
+
+
+
+Convert string to value :
+    consider a string s,
+
+        for ints : std::stoi( s );
+        for floats: std::stof( s );
+        for doubles : std::stod( s );
+
+Templates are kind of "in function" definition of type.
+
+template <class Name_of_use> Name_of_use function( arguments );
+
+References -> modify the original
+
+
+
+
+install new libraries for python from shell : 
+	pip install (name of the library)
+
+	each library should have an instance __version__ accessible from python by :
+	(name of the library).__version__

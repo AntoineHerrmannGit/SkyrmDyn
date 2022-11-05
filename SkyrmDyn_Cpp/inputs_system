@@ -1,0 +1,33 @@
+#******************************************************************************
+# System configuration and software parameters
+#******************************************************************************
+
+
+#------------------------------------------------------------------------------
+# Operating system
+#------------------------------------------------------------------------------
+
+# name of the operating system
+system = 'windows'
+
+
+#------------------------------------------------------------------------------
+# Absolute paths
+#------------------------------------------------------------------------------
+
+# location of python executable
+python = 'C:\Program Files\Python39\python.exe'
+
+# location of povray executable
+povray = 'D:\Povray\bin\pvengine.exe'
+
+# location of code executable
+code = 'D:\Antoine\SkyrmDyn\C++\SkyrmDyn_Cpp\'
+
+
+
+
+
+
+
+

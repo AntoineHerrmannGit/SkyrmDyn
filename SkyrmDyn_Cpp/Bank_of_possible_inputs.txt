@@ -1,0 +1,283 @@
+#******************************************************************************
+# Possible inputs encoded in SkyrmDyn
+#******************************************************************************
+
+#******************************************************************************
+# Standard declaration format
+#******************************************************************************
+
+This section states the rules to follow when decalring variables as inputs for
+SkyrmDyn :
+
+1. Lines starting with (#) are commented lines and wont be read by the code.
+
+2. Variables always starts a line and cannot contain empty spaces.
+
+3. Lines finishes with a character without extra empty spaces.
+
+4. Strings are declared in between appostrophes ('), cannot contain empty 
+spaces and have to belong to the previously-established list in this bank.
+
+5. Integers, floats and double are simple chain of numbers (eventualy with 
+point as coma) without empty space. 
+
+6. Eventually, floats and double can be expressed in scientific notation
+(e-*exponent*).
+
+7. Arrays are declared in between opening brackets ({) and closing brackets (})
+immediately followed by integers, floats or double separated by a  spaced coma 
+(, ) and immediately closed.
+
+8. Arrays must contain 3 numbers.
+
+The following is organized as follow :
+# brief description of the variable
+-- type --
+variable = *possibilities*
+
+
+#******************************************************************************
+# Lattice generators
+#******************************************************************************
+
+
+# name of the lattice in real space
+-- string --
+lattice_name =  '1D_chain'
+		'2D_square'
+		'2D_centered_square'
+		'2D_triangular'
+		'2D_honeycomb'
+		'3D_simple_cubic'
+		'3D_FCC'
+		'3D_BCC'
+		'3D_diamond'
+		'3D_triangular'
+		'3D_straight_honeycomb'
+		'3D_staggered_honeycomb'
+
+# lattice step in real space
+-- double --
+lattice_step = 1
+
+# variation of the lattice step allowed as an effective error in the distance
+# between atoms with respect to the geometry, in percentage with respect to
+# the lattice step
+-- double --
+lattice_step_sigma = 1
+
+# Number of cells along each direction of the lattice
+-- array of integers --
+lattice_size = {100, 100, 100}
+
+
+#******************************************************************************
+# Boundary conditions of the system
+#******************************************************************************
+
+
+# Geometrical boundary conditions of the lattice
+-- string --
+bounday_conditions = 'none'
+		     'tor'
+		     'sphere'
+		     'linear'
+		     'infinity'
+
+
+#******************************************************************************
+# Initial spin configuration of the lattice
+#******************************************************************************
+
+
+# name of the initial spin configuration 
+-- string --
+initial_spin_config = 'ferromagnetic'
+		      'ferrimagnetic'
+		      'antiferromagnetic'
+		      'random'
+		      'spin_spiral'
+		      'skyrmion'
+
+
+#------------------------------------------------------------------------------
+# If using a ferromagnetic-like spin configuration :
+#------------------------------------------------------------------------------
+
+# initial axis for the spin configuration
+-- array of doubles --
+initial_spin_axis = {0, 0, 1}
+
+# ferrimagnetic ration between two sites
+-- double --
+initial_spin_ratio = 2
+
+
+#------------------------------------------------------------------------------
+# If using a spin spiral :
+#------------------------------------------------------------------------------
+
+# initial spin spiral vector which carries the spin spiral
+-- array of doubles --
+initial_spin_spiral_vector = {1, 0, 0}
+
+# initial phases of the spin spiral normalized by pi
+-- double --
+initial_spin_spiral_phase_theta = 0
+-- double --
+initial_spin_spiral_phase_phi = 0
+
+
+#------------------------------------------------------------------------------
+# If placing a skyrmion in the lattice :
+#------------------------------------------------------------------------------
+
+# name of the skyrmion type
+-- string --
+initial_spin_skyrmion_type = 'Bloch'
+			     'Neel'
+			     'Anti-skyrmion'
+
+# initial position of the skyrmion
+-- array of doubles --
+initial_spin_skyrmion_position = {0.5, 0.5, 0.5}
+
+# radius of the initial skyrmion normalized by the lattice step
+-- double --
+initial_spin_skyrmion_radius = 10
+
+# topological charge of the initial skyrmion
+-- integer --
+initial_spin_skyrmion_charge = 10
+
+# phase of the initial skyrmion normalized by pi
+-- double --
+initial_spin_skyrmion_phase = 0
+
+
+#******************************************************************************
+# Hamiltonian parameters
+#******************************************************************************
+
+
+#------------------------------------------------------------------------------
+# Temperature
+#------------------------------------------------------------------------------
+-- double --
+temperature_T = 1
+
+#------------------------------------------------------------------------------
+# Diffusion coefficient
+#------------------------------------------------------------------------------
+-- double --
+diffusion_D = 1
+
+#------------------------------------------------------------------------------
+# Heisenberg exchange
+#------------------------------------------------------------------------------
+-- double --
+exchange_J = 1
+
+#------------------------------------------------------------------------------
+# Dzyaloshinskii-Moryia Interaction
+#------------------------------------------------------------------------------
+-- double --
+DMI = 1
+
+-- string -- 
+DMI_type = 'Neel'
+	   'Bloch'
+
+#------------------------------------------------------------------------------
+# Anisotropy axis
+#------------------------------------------------------------------------------
+-- double --
+anisotroy_K = 1
+
+-- array of doubles --
+anisotropy_field = {0, 0, 1}
+
+#------------------------------------------------------------------------------
+# Zeeman
+#------------------------------------------------------------------------------
+-- double --
+magnetic_field_H = 1
+
+-- array of doubles --
+magnetic_field = {0, 0, 1}
+
+#------------------------------------------------------------------------------
+# Demagnetization field
+#------------------------------------------------------------------------------
+-- double --
+demag_M_s = 1
+
+#------------------------------------------------------------------------------
+# Four spins
+#------------------------------------------------------------------------------
+-- double --
+four_spins_F = 1
+
+#------------------------------------------------------------------------------
+# Biquadratic
+#------------------------------------------------------------------------------
+-- double --
+biquadratic_B = 1
+
+
+#******************************************************************************
+# Dynamics parameters
+#******************************************************************************
+
+
+#------------------------------------------------------------------------------
+# LLG parameters
+#------------------------------------------------------------------------------
+
+# name of the LLG equation
+-- string --
+LLG_equation =  'll'
+		'llg'
+		'illg'
+
+# damping parameter
+-- double --
+damping = 1
+
+# characteristic time
+-- double --
+tau = 1
+
+# total simulation time
+-- double --
+llg_time = 100
+
+# time step
+-- double --
+llg_time_step = 1e-4
+
+
+#------------------------------------------------------------------------------
+# LLG solvers
+#------------------------------------------------------------------------------
+
+# name of the LLG solver
+-- string --
+solver = 'euler'     	( available for all equations )
+	 'rk_4'      	( available for LL and LLG only )
+
+
+
+
+
+
+#------------------------------------------------------------------------------
+# Operating system
+#------------------------------------------------------------------------------
+
+# name of the operating system
+-- string --
+os = 'windows'
+     'linux'
+     'macos'
+

@@ -1,0 +1,190 @@
+#******************************************************************************
+# Input file with all parameters used to define the simulation set-up
+#******************************************************************************
+
+
+#******************************************************************************
+# Lattice generators
+#******************************************************************************
+
+
+# name of the lattice in real space
+lattice_name = '2D_square'
+
+# lattice step in real space
+lattice_step = 1
+
+# variation of the lattice step allowed as an effective error in the distance
+# between atoms with respect to the geometry, in percentage with respect to
+# the lattice step
+lattice_step_sigma = 0.001
+
+# Number of cells along each direction of the lattice
+lattice_size = {10, 10, 2}
+
+
+#******************************************************************************
+# Boundary conditions of the system
+#******************************************************************************
+
+
+# Geometrical boundary conditions of the lattice
+bounday_conditions = 'none'
+
+
+#******************************************************************************
+# Initial spin configuration of the lattice
+#******************************************************************************
+
+
+# Name of the initial spin configuration
+initial_spin_config = 'random'
+
+
+#------------------------------------------------------------------------------
+# If using a ferromagnetic-like spin configuration :
+#------------------------------------------------------------------------------
+
+# initial axis for the spin configuration
+initial_spin_axis = {-1, 0, 0}
+
+# ferrimagnetic ration between two sites
+initial_spin_ratio = 2
+
+
+#------------------------------------------------------------------------------
+# If using a spin spiral :
+#------------------------------------------------------------------------------
+
+# initial spin spiral vector which carries the spin spiral
+initial_spin_spiral_vector = {1, 0, 0}
+
+# initial phases of the spin spiral normalized by pi
+initial_spin_spiral_phase_theta = 0
+initial_spin_spiral_phase_phi = 0
+
+
+#------------------------------------------------------------------------------
+# If placing a skyrmion in the lattice :
+#------------------------------------------------------------------------------
+
+# name of the skyrmion type
+initial_spin_skyrmion_type = 'Bloch'
+
+# initial position of the skyrmion
+initial_spin_skyrmion_position = {2, 2, 2}
+
+# radius of the initial skyrmion normalized by the lattice step
+initial_spin_skyrmion_radius = 10
+
+# topological charge of the initial skyrmion
+initial_spin_skyrmion_charge = 10
+
+# phase of the initial skyrmion normalized by pi
+initial_spin_skyrmion_phase = 0
+
+
+#******************************************************************************
+# Hamiltonian parameters
+#******************************************************************************
+
+
+#------------------------------------------------------------------------------
+# Temperature
+#------------------------------------------------------------------------------
+temperature_T = 1
+
+#------------------------------------------------------------------------------
+# Diffusion coefficient
+#------------------------------------------------------------------------------
+diffusion_D = 1
+
+#------------------------------------------------------------------------------
+# Heisenberg exchange
+#------------------------------------------------------------------------------
+exchange_J = 1
+
+#------------------------------------------------------------------------------
+# Dzyaloshinskii-Moryia Interaction
+#------------------------------------------------------------------------------
+DMI = 1
+DMI_type = 'Neel'
+
+#------------------------------------------------------------------------------
+# Anisotropy axis
+#------------------------------------------------------------------------------
+anisotroy_K = 1
+anisotropy_field = {0, 0, 1}
+
+#------------------------------------------------------------------------------
+# Zeeman
+#------------------------------------------------------------------------------
+magnetic_field_H = 1
+magnetic_field = {0, 0, 1}
+
+#------------------------------------------------------------------------------
+# Demagnetization field
+#------------------------------------------------------------------------------
+demag_M_s = 1
+
+#------------------------------------------------------------------------------
+# Four spins
+#------------------------------------------------------------------------------
+four_spins_F = 1
+
+#------------------------------------------------------------------------------
+# Biquadratic
+#------------------------------------------------------------------------------
+biquadratic_B = 1
+
+
+#******************************************************************************
+# Dynamics parameters
+#******************************************************************************
+
+
+#------------------------------------------------------------------------------
+# LLG parameters
+#------------------------------------------------------------------------------
+
+# name of the LLG equation
+LLG_equation = 'llg'
+
+# damping parameter
+damping = 0.1
+
+# characteristic time
+tau = 0.001
+
+# total simulation time
+llg_time = 10
+
+# time step
+llg_time_step = 1e-2
+
+
+#------------------------------------------------------------------------------
+# LLG solvers
+#------------------------------------------------------------------------------
+
+# name of the LLG solver
+solver = 'euler'
+
+
+#------------------------------------------------------------------------------
+# Operating system
+#------------------------------------------------------------------------------
+
+# name of the operating system
+os = 'windows'
+
+
+
+
+
+
+
+
+
+
+

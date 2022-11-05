@@ -1,0 +1,48 @@
+#******************************************************************************
+# Possible system inputs encoded in SkyrmDyn
+#******************************************************************************
+
+#******************************************************************************
+# Standard declaration format
+#******************************************************************************
+
+This section states the rules to follow when decalring variables as inputs for
+SkyrmDyn :
+
+1. Lines starting with (#) are commented lines and wont be read by the code.
+
+2. Variables always starts a line and cannot contain empty spaces.
+
+3. Lines finishes with a character without extra empty spaces.
+
+4. Strings are declared in between appostrophes ('), cannot contain empty 
+spaces and have to belong to the previously-established list in this bank.
+
+5. Integers, floats and double are simple chain of numbers (eventualy with 
+point as coma) without empty space. 
+
+6. Eventually, floats and double can be expressed in scientific notation
+(e-*exponent*).
+
+7. Arrays are declared in between opening brackets ({) and closing brackets (})
+immediately followed by integers, floats or double separated by a  spaced coma 
+(, ) and immediately closed.
+
+8. Arrays must contain 3 numbers.
+
+The following is organized as follow :
+# brief description of the variable
+-- type --
+variable = *possibilities*
+
+
+#------------------------------------------------------------------------------
+# Operating system
+#------------------------------------------------------------------------------
+
+# name of the operating system
+-- string --
+os = 'windows'
+     'linux'
+     'macos'
+
