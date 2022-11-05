@@ -1,0 +1,11 @@
+SkyrmDyn is a spin dynamics software developed by Antoine Herrmann (2022)
+
+It requires external softwares :
+
+Python libraries :
+	python 3.9
+	matplotlib 3.5.2
+	moviepy 1.0.3
+
+Other softwares :
+	POV-Ray 3.7
